@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 func handleInput():
 	var move_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = move_direction*speed
+	velocity = move_direction.normalized()*speed
 
 func updateAnimation():
 	if velocity.length() == 0:
@@ -21,6 +21,6 @@ func updateAnimation():
 
 func _physics_process(delta):
 	handleInput()
-	move_and_slide()
+	# velocity = velocity * delta
 	updateAnimation()
-
+	move_and_slide()

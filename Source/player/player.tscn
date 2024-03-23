@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcxey1d6dnpb6"]
+[gd_scene load_steps=10 format=3 uid="uid://bcxey1d6dnpb6"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_3wt13"]
 [ext_resource type="Texture2D" uid="uid://b02bo1w3x3mii" path="res://art/player sprites.png" id="1_fmmdo"]
@@ -95,6 +95,9 @@ _data = {
 "walkUp": SubResource("Animation_ptn7y")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l48x1"]
+size = Vector2(14, 4)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_3wt13")
 
@@ -110,3 +113,7 @@ vframes = 7
 libraries = {
 "": SubResource("AnimationLibrary_s6mh8")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_l48x1")
