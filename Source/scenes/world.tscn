@@ -471,6 +471,7 @@ texture = ExtResource("2_8ep5b")
 0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(-8, 8)
+0:0/0/y_sort_origin = 7
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -879,7 +880,7 @@ layer_1/tile_data = PackedInt32Array(393224, 3, 0, 131079, 3, 0, 262147, 3, 0, 3
 layer_2/name = "trees"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 1
-layer_2/tile_data = PackedInt32Array(458762, 1, 0, 196619, 1, 0, 458753, 1, 0)
+layer_2/tile_data = PackedInt32Array(262154, 1, 0, 393221, 1, 0, 131074, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_ny5vq")]
 position = Vector2(47, 118)
