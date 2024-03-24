@@ -2755,7 +2755,8 @@ texture = ExtResource("3_m1iu3")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.125, -6.875, -0.3125, -7.125, -2.875, -6.25, -4, 5.875, -4, 7, -2.75, 6.8125, -0.625, 8, -0.125, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_470rb"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 terrain_set_0/mode = 1
 terrain_set_0/terrain_0/name = "sand"
 terrain_set_0/terrain_0/color = Color(0.670588, 0.054902, 0.470588, 1)
@@ -2796,7 +2797,14 @@ tilemap = NodePath("../../TileMap")
 
 [node name="Slime" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("6_vhhvj")]
 position = Vector2(137, 68)
-endPoint = NodePath("Marker2D")
+endPoint = NodePath("MarkerSlime")
 
-[node name="Marker2D" type="Marker2D" parent="Slime"]
+[node name="MarkerSlime" type="Marker2D" parent="Slime"]
 position = Vector2(66, 42)
+
+[node name="Slime2" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("6_vhhvj")]
+position = Vector2(274, 136)
+endPoint = NodePath("MarkerSlime2")
+
+[node name="MarkerSlime2" type="Marker2D" parent="Slime2"]
+position = Vector2(-94, -102)
