@@ -2803,8 +2803,8 @@ endPoint = NodePath("MarkerSlime")
 position = Vector2(66, 42)
 
 [node name="Slime2" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("6_vhhvj")]
-position = Vector2(274, 136)
+position = Vector2(150, 125)
 endPoint = NodePath("MarkerSlime2")
 
 [node name="MarkerSlime2" type="Marker2D" parent="Slime2"]
-position = Vector2(-94, -102)
+position = Vector2(-120, -5)

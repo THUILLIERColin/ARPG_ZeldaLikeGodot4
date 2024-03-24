@@ -130,3 +130,5 @@ collision_mask = 3
 z_index = 1
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_ncp1w")
+
+[connection signal="area_entered" from="damagesBox" to="." method="_on_damages_box_area_entered"]
