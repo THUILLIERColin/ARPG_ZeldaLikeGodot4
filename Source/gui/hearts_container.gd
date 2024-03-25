@@ -19,10 +19,6 @@ func setMaxHearts(maxHearts: int):
 
 func updateHearts(currentHearts: int):
 	var hearts = get_children()
-	
-	print_debug(hearts.size())
-	for i in range(hearts.size()):
-		print_debug(hearts[i])
 
 	for i in range(currentHearts):
 		hearts[i].update(true)
