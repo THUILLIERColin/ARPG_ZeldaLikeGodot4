@@ -170,10 +170,10 @@ z_index = 1
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_l48x1")
 
-[node name="damagesBox" type="Area2D" parent="."]
+[node name="HurtBox" type="Area2D" parent="."]
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="damagesBox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 z_index = 1
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_ncp1w")
@@ -186,4 +186,5 @@ libraries = {
 [node name="HurtTimer" type="Timer" parent="."]
 one_shot = true
 
-[connection signal="area_entered" from="damagesBox" to="." method="_on_damages_box_area_entered"]
+[connection signal="area_entered" from="HurtBox" to="." method="_on_damages_box_area_entered"]
+[connection signal="area_exited" from="HurtBox" to="." method="_on_damages_box_area_exited"]
