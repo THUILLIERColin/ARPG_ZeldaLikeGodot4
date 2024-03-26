@@ -2,8 +2,8 @@
 
 [ext_resource type="Resource" uid="uid://pu07v8owsgbh" path="res://inventory/items/lifepot.tres" id="1_pojpi"]
 [ext_resource type="Resource" uid="uid://c3xqla7do623a" path="res://inventory/items/sword.tres" id="2_y5b5k"]
-[ext_resource type="Script" path="res://inventory/inventory.gd" id="3_t5xgg"]
+[ext_resource type="Script" path="res://inventory/items/inventory.gd" id="3_3d87e"]
 
 [resource]
-script = ExtResource("3_t5xgg")
-items = Array[Resource("res://inventory/inventoryItem.gd")]([ExtResource("1_pojpi"), ExtResource("1_pojpi"), ExtResource("2_y5b5k"), null, null, null, null, ExtResource("1_pojpi"), null, ExtResource("2_y5b5k"), null])
+script = ExtResource("3_3d87e")
+items = Array[Resource("res://inventory/inventoryItem.gd")]([ExtResource("2_y5b5k"), ExtResource("2_y5b5k"), null, null, null, null, ExtResource("1_pojpi"), null, null, ExtResource("1_pojpi"), null, null, null, null, null])

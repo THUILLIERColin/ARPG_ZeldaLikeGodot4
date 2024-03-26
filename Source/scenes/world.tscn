@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bylk1vcm4l8gc"]
+[gd_scene load_steps=19 format=3 uid="uid://bylk1vcm4l8gc"]
 
 [ext_resource type="Texture2D" uid="uid://cr00gkmja0b1x" path="res://art/tileset/TilesetFloor.png" id="1_bhe3t"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_dhlay"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://camera/FollowCam.gd" id="5_c2wu8"]
 [ext_resource type="PackedScene" uid="uid://b215ojcm14k4e" path="res://enemies/slime.tscn" id="6_vhhvj"]
 [ext_resource type="PackedScene" uid="uid://c3sjpuqb14aqc" path="res://gui/hearts_container.tscn" id="7_yq5as"]
+[ext_resource type="Resource" uid="uid://brf5bovhotn0g" path="res://inventory/playerInventory.tres" id="8_p4nxi"]
 [ext_resource type="Script" path="res://gui/CanvasLayer.gd" id="10_7mkxf"]
 [ext_resource type="PackedScene" uid="uid://blvaknk8anc8n" path="res://gui/inventory_gui.tscn" id="11_ablp6"]
 
@@ -2802,6 +2803,7 @@ layer_3/tile_data = PackedInt32Array(786437, 2, 65536, 393231, 2, 65536, 458770,
 [node name="Player" parent="." instance=ExtResource("1_ny5vq")]
 position = Vector2(272, 189)
 knockback_power = 650
+inventory = ExtResource("8_p4nxi")
 
 [node name="FollowCam" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
 position = Vector2(1, 1)

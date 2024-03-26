@@ -60,7 +60,7 @@ func hurtByEnemy(area):
 
 func _on_damages_box_area_entered(area):
 	if area.has_method("collect"):
-		area.collect()
+		area.collect(inventory)
 
 func knockback(enemy_velocity: Vector2):
 	var knockback_direction = (enemy_velocity - velocity).normalized() * knockback_power
