@@ -6,7 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_514p1"]
 script = ExtResource("2_3cg1t")
-items = Array[Resource("res://inventory/inventoryItem.gd")]([])
+slots = Array[Resource("res://inventory/inventorySlot.gd")]([])
 
 [sub_resource type="Animation" id="Animation_3mhse"]
 length = 0.001
