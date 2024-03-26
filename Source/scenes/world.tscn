@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bylk1vcm4l8gc"]
+[gd_scene load_steps=18 format=3 uid="uid://bylk1vcm4l8gc"]
 
 [ext_resource type="Texture2D" uid="uid://cr00gkmja0b1x" path="res://art/tileset/TilesetFloor.png" id="1_bhe3t"]
 [ext_resource type="Script" path="res://scenes/world.gd" id="1_dhlay"]
@@ -10,6 +10,8 @@
 [ext_resource type="Script" path="res://camera/FollowCam.gd" id="5_c2wu8"]
 [ext_resource type="PackedScene" uid="uid://b215ojcm14k4e" path="res://enemies/slime.tscn" id="6_vhhvj"]
 [ext_resource type="PackedScene" uid="uid://c3sjpuqb14aqc" path="res://gui/hearts_container.tscn" id="7_yq5as"]
+[ext_resource type="Script" path="res://gui/CanvasLayer.gd" id="10_7mkxf"]
+[ext_resource type="PackedScene" uid="uid://blvaknk8anc8n" path="res://gui/inventory_gui.tscn" id="11_ablp6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m22gb"]
 texture = ExtResource("1_bhe3t")
@@ -2798,10 +2800,11 @@ layer_3/name = "collectables"
 layer_3/tile_data = PackedInt32Array(786437, 2, 65536, 393231, 2, 65536, 458770, 2, 65536, 720911, 2, 65536, 655369, 2, 131072, 917511, 2, 131072)
 
 [node name="Player" parent="." instance=ExtResource("1_ny5vq")]
-position = Vector2(47, 118)
+position = Vector2(272, 189)
 knockback_power = 650
 
 [node name="FollowCam" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
+position = Vector2(1, 1)
 limit_left = 0
 limit_top = 0
 limit_right = 608
@@ -2826,5 +2829,23 @@ endPoint = NodePath("MarkerSlime2")
 position = Vector2(-120, -5)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+script = ExtResource("10_7mkxf")
 
 [node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("7_yq5as")]
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("11_ablp6")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -45.0
+offset_right = 69.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
+[connection signal="opended" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opended"]
