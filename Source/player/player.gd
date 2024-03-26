@@ -12,6 +12,8 @@ signal health_change
 @onready var hurtBox = $HurtBox
 @export var knockback_power: int = 500
 
+@export var inventory: Inventory
+
 var isHurt = false
 
 func _ready():
