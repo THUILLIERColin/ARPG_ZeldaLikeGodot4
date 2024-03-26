@@ -53,6 +53,4 @@ func _on_damages_box_area_entered(area):
 func knockback(enemy_velocity: Vector2):
 	var knockback_direction = (enemy_velocity - velocity).normalized() * knockback_power
 	velocity = knockback_direction
-	print_debug(position)
 	move_and_slide() 
-	print_debug(position)

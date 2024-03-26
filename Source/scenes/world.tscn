@@ -2789,6 +2789,7 @@ layer_2/tile_data = PackedInt32Array(262154, 1, 0, 393221, 1, 0, 131074, 1, 0, 6
 
 [node name="Player" parent="." instance=ExtResource("1_ny5vq")]
 position = Vector2(47, 118)
+knockback_power = 650
 
 [node name="FollowCam" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
 limit_left = 0
